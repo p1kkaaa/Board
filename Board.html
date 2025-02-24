@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доска заметок</title>
+    <link id="theme-style" rel="stylesheet" href="Board.css">
+</head>
+<body>
+
+    <button id="themeToggle" class="theme-btn">🌙</button>
+
+    <div class="clock" id="clock"></div>
+
+    <div class="container">
+        <h2>Заметки</h2>
+        <div class="input-container">
+            <textarea id="noteInput" placeholder="Введите заметку..."></textarea>
+            <button id="addNoteBtn">Добавить</button>
+        </div>
+        <div class="notes-wrapper"></div>
+    </div>
+
+    <button class="messenger-btn" onclick="toggleChat()">💬</button>
+
+    <div class="chat-container" id="chat">
+        <div class="chat-header">Чат поддержки</div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+            <button id="emojiBtn">📎</button>
+            <input type="text" id="chatInput" placeholder="Напишите сообщение...">
+            <button onclick="sendMessage()">📩</button>
+        </div>
+    </div>
+
+    <script src="Theme.js"></script>
+    <script src="Clock.js"></script>
+    <script src="Board.js"></script>
+    <script src="Messenger.js"></script>
+    <script src="Emoji.js"></script>
+
+</body>
+</html>
